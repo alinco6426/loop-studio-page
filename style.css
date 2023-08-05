@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+body{
+    background-color: hsl(0, 0%, 100%);
+    font-family: 'alata';
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    background-image: url(image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    padding:   30px 80px;
+    height: 700px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.logo-container{
+    margin-top: 20px;
+}
+.mobile-list,.hamburger-div{
+    display: none;
+}
+.lists{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.lists a{
+    color:  hsl(0, 0%, 100%);
+    margin: 0 10px;
+    font-size: large;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-width 0.5s ease;
+}
+ a:hover{
+    border-width: 2px;
+    border-image: linear-gradient(to right, transparent 20%,white 50%,transparent );
+    border-image-slice: 3;
+}
+.heading{
+    width:550px;
+    margin: 100px 0;
+    height: auto;
+    padding: 20px;
+    border: hsl(0, 0%, 100%) 2px solid;
+}
+.heading h1{
+    color: hsl(0, 0%, 100%);
+    font-size: 60px;
+    padding: 20px;
+    font-family: 'Josefin sans';
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.last-item,.third-item{
+    display: inline;
+}
+.interactive{
+    background-image: url(image-interactive.jpg);
+    background-repeat: no-repeat;
+    height: 400px;
+    background-size: 70%;
+    margin: 50px;
+    position: relative;
+}
+.interactive-card{
+    width: 550px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.interactive h1{
+    font-family: 'josefin sans';
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 100;
+    margin: 15px 0;
+}
+.interactive p{
+    color:  hsl(0, 0%, 55%);
+}
+.creation-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+}
+.title{
+    padding-top: 10px;
+}
+.title h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'josefin sans';
+    font-weight: 100;
+}
+
+ .game-display-container {
+     width: 100%;
+ }
+.creation-btn{
+    background: hsl(0, 0%, 100%);
+    border: hsl(0, 100%, 0%) 2px solid;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 5px;  
+    width: 150px;  
+    cursor: pointer;
+}
+.creation-btn:hover{
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 0%);
+    border: hsl(0, 0%, 100%)  2px solid;
+    transition: all 0.3s;
+}
+.game-displayer{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.game-display{
+    width: 24%;
+    position: relative;
+    height: 400px;
+    margin: 5px;
+    cursor: pointer;
+}
+.display-image{
+    width: 100%;
+    height: 100%;
+}
+.game-display h3{
+    color:  hsl(0, 0%, 100%);
+    position: absolute;
+    top: 80%;
+    left: 10px;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'josefin sans';
+}
+.game-display:hover .display-image{
+    opacity: 0.4;
+}
+.game-display:hover h3{
+    color: hsl(0, 0%, 0%);
+}
+.mobile-image{
+    display: none;
+}
+footer{
+    background-color: hsl(0, 100%, 0%);
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+    margin-top: 50px;
+}
+footer p{
+    color:  hsl(0, 0%, 41%);
+}
+footer a{
+    color: hsl(0, 0%, 100%);
+    margin:  25px 20px 0 0 ;
+    font-size: large;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    font-weight: 300;
+    padding: 10px 10px 0 0;
+}
+.infos{
+    margin-top: 15px;
+}
+.icons{
+    margin: 10px 0 10px 140px;
+    display: block;
+}
+.icons img{
+    padding: 4px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:450px) {
+    .header {
+            background-image: url(image-hero.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            padding: 20px;
+            height: 400px;
+            position: relative;
+        }
+        .display {
+            display: block;
+         
+        }
+        .nav {
+            display: block;
+            justify-content: space-between;
+        }
+        .logo-container {
+            margin-top: 0;
+        }
+        .logo-container img{
+            width: 100px;
+        }
+        .hamburger-div {
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        .hamburger-div #open-btn{
+           height: 15px;
+        }
+        .list-item-container{
+            display: none;
+            background-color: hsl(0, 100%, 0%);
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            z-index: 3; 
+            bottom: 0;
+        }
+        .mobile-list{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .mobile-list #close-btn{
+            width: 20px;
+            height: 20px;
+        }
+        .lists{
+            width: 100%;
+            display: block;
+        }
+         .lists a{
+            display: block;
+         }
+        .heading {
+            width: 100%;
+            margin: 60px 0;
+        }
+        .heading h1 {
+            font-size: 40px;
+            padding: 0;
+        }
+        .interactive {
+            background-image: url(image-interactive\ mobile.jpg);
+            width: 100%;
+            margin: 40px 0;
+            background-size: 90%;
+            background-position: 20px  20px;
+            height: 500px;
+            padding: 30px;
+        }
+        .interactive-card {
+            width: 100%;
+            height: 100px;
+            top: 40%;
+            text-align: center;
+        }
+        .interactive-card h1 {
+            font-size: 30px;
+            font-weight: 100;
+            margin: 15px 0;
+        }
+        .interactive-card p{
+            font-size: 17px;
+        }
+        .game-display {
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .game-displayer {
+            width: 100%;
+            display: block;
+        }
+        .game-display {
+            width: 100%;
+            margin: 20px 0;
+            height: 200px;
+        }
+        .game-display-container{
+            width: 100%;
+            position: relative;
+
+        }
+        .desktop-image {
+            display: none;
+        }
+        .mobile-image {
+           display: block;
+           height: 100%;
+           width: 100%;
+        }
+        .creation-container {
+            width: 100%;
+            display: block;
+            padding: 20px;
+        }
+        .title{
+            padding: 0;
+        }
+        .creation-btn-container{
+            position: absolute;
+            bottom: -30px;
+            right: 26%;
+        }
+        .title h2 {
+            font-size: 35px;
+            text-align: center;
+        }
+        .creation-btn {
+            padding: 15px;
+            letter-spacing: 6px;
+            text-align: center;
+            width: 160px;
+        }
+         footer {
+            display: block;
+            padding: 40px;
+            margin-top: 100px;
+            text-align: center;
+        }
+        footer a {
+            margin: 0;
+            display: block;
+            padding: 15px;
+       }
+       .icons {
+            margin: 20px;
+            display: block;
+        }
+        .icons img{
+            padding: 5px;
+        }
+}
